@@ -35,3 +35,5 @@ bg_chem<- read.csv("BGchem2008data.csv")
 
 
 The best ice cream flavor is chocolate!
+
+I also like mint chip. 
