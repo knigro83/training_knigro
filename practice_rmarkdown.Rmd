@@ -32,3 +32,6 @@ bg_chem<- read.csv("BGchem2008data.csv")
 -   Calculate mean Redfield ratio
 
 -   Plot Redfield ratio
+
+
+The best ice cream flavor is chocolate!
