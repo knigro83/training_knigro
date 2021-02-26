@@ -38,9 +38,4 @@ The best ice cream flavor is chocolate!
 
 I also like mint chip. Strawberry is good too. But pistachio is also good! There is also vanilla...but it's kind of boring. 
 
-<<<<<<< HEAD
-Banana ice cream is easy to make at home! It is fun to do this during the weekend
-
-=======
-Banana ice cream is easy to make at home! Sounds delicious!
->>>>>>> 120da2ee80729f05d4a56954e0e41c01e652c859
+Banana ice cream is easy to make at home! It is fun to do this during the weekend and sounds delicious!
