@@ -34,6 +34,4 @@ bg_chem<- read.csv("BGchem2008data.csv")
 -   Plot Redfield ratio
 
 
-The best ice cream flavor is chocolate!
-
-I also like mint chip. 
+The best ice cream flavor is chocolate! But pistachio is also good! 
