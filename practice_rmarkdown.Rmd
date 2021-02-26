@@ -1,0 +1,34 @@
+---
+title: "practice_rmarkdown"
+output: html_document
+bibliography: references.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(readr)
+```
+
+# Introduction 
+
+This data came from a dataset entitled "North Pole Environmental Observatory Bottle Chemistry" [@universityoftexasatelpaso2018] and was downloaded from the [Arctic Data Center](https://arcticdata.io/catalog/view/doi:10.18739/A25T3FZ8X).
+
+-   Read in data
+
+```{r}
+bg_chem<- read.csv("BGchem2008data.csv")
+```
+
+# Analysis
+
+-   Calculate summary statistics
+
+```{=html}
+<!-- -->
+```
+-   Calculate mean Redfield ratio
+
+-   Plot Redfield ratio
