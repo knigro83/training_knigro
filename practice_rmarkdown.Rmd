@@ -8,34 +8,51 @@ bibliography: references.bib
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r}
+```{r include=FALSE}
 library(readr)
 ```
 
-# Introduction 
+# Introduction
 
-This data came from a dataset entitled "North Pole Environmental Observatory Bottle Chemistry" [@universityoftexasatelpaso2018] and was downloaded from the [Arctic Data Center](https://arcticdata.io/catalog/view/doi:10.18739/A25T3FZ8X).
+This data came from a dataset entitled "North Pole Environmental Observatory Bottle Chemistry" [@universityoftexasatelpaso2018] and was downloaded from the [Arctic Data Center](https://arcticdata.io/catalog/view/doi:10.18739/A25T3FZ8X)
 
 -   Read in data
 
-```{r}
-bg_chem<- read.csv("BGchem2008data.csv")
+```{r message=FALSE, warning=FALSE}
+bg_chem<- read_csv("BGchem2008data.csv")
 ```
 
 # Analysis
 
 -   Calculate summary statistics
 
-```{=html}
-<!-- -->
+```{r}
+nitrate <- mean(bg_chem$NO3)
+nitrite <- mean(bg_chem$NO2)
+amm <- mean(bg_chem$NH4)
+phos <- mean(bg_chem$P)
 ```
+
+```{r}
+ratio <- (nitrate + nitrite + amm)/phos
+```
+
 -   Calculate mean Redfield ratio
+
+The Redfield ratio for this dataset is approximately `r round(ratio)`
 
 -   Plot Redfield ratio
 
+```{r echo=FALSE}
+plot(bg_chem$P, bg_chem$NO2 + bg_chem$NO3 +bg_chem$NH4)
+```
+
+# Some side-notes
 
 The best ice cream flavor is chocolate!
 
-I also like mint chip. Strawberry is good too. But pistachio is also good! There is also vanilla...but it's kind of boring. 
+I also like mint chip. Strawberry is good too. But pistachio is also good! There is also vanilla...but it's kind of boring.
 
 Banana ice cream is easy to make at home! It is fun to do this during the weekend and sounds delicious!
+
+# References
