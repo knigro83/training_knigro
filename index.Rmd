@@ -8,3 +8,5 @@ Hello
 The modules I've gotten through:
 
 -[Session 8: Data Cleaning](./data_cleaning_session8.html)
+
+![This is a chart I made](chart.png)
