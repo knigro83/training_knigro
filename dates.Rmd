@@ -1,0 +1,54 @@
+---
+title: "Dates"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(lubridate)
+library(dplyr)
+library(tidyr)
+```
+
+```{r}
+data.frame(dates=c("2021-01-02","2021-01-03","2021-02-04")) %>% 
+mutate(dates = as.Date(dates))
+```
+
+Can't use as.Date when the dates aren't formatted properly
+```{r}
+data.frame(dates=c("20210102","20210103","20210204")) %>% 
+mutate(dates = as.Date(dates))
+```
+
+"ymd" from the lubridate package can help with this.
+```{r}
+data.frame(dates=c("20210102","20210103","20210204")) %>% 
+mutate(dates = ymd(dates))
+```
+
+```{r}
+# Make a data.frame with some fake data in it
+inconsistent_dates <- c("2009-01-01", 
+                        "20090101", 
+                        "01-01-2009",
+                        "2009-01-01 12:59:59",
+                        "2009-01-01 12:11", 
+                        "2009-01-01 12")
+
+samples <- data.frame(id = seq_along(inconsistent_dates),
+                      date = inconsistent_dates,
+                      value = rnorm(length(inconsistent_dates), 50, 5))
+samples
+
+parse_date_time(samples$date,
+                orders = c(
+                  "ymd",
+                  "mdy",
+                  "ymd HMS",
+                  "ymd H"
+                ))
+```
